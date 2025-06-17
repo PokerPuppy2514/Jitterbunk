@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import LoomVideo, User
+
+admin.site.register(LoomVideo)
+admin.site.register(User)

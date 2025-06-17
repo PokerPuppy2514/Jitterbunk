@@ -69,6 +69,10 @@ def team_videos(request,team_name):
     video_list = LoomVideo.objects.filter(team = team_name)
     return render(request, 'loom/team_videos.html', {'video_list' : video_list})
 
+def transcript(request,video_id):
+    text = LoomVideo.objects.get(pk= video_id).transcript
+    return render(request, "loom/transcript.html", {'transcript': text})
+
 
 
 

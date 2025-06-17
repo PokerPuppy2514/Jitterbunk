@@ -2,14 +2,28 @@
 
 <!--get every video link-->
 {% if video_list %}
-    <ul>
+    <table>
+        <tr>
+            <th>Video</th>
+            <th>Creator</th>
+            <th>Summary</th>
+            <th>Transcript</th>
+            <th>Tags</th>
+            <th>Created Date</th>
+        <tr>
     {% for video in video_list %}
-        <if video.user == User.username> <!-- how to check for Use?-->
-            <li><a href= {{video.link}}> {{video.title}}</a></li>
-        </endif>
+
+        <tr>
+            <td><a href= {{video.link}}> {{video.title}}</a></td>
+            <td>{{video.user}}</td>
+            <td>{{video.summary}}</td>
+            <td><a href = "{% url 'transcript' video.id %}">Script</a></td>
+            <td>{{video.tags}}</td>
+            <td>{{video.created_at}}</td>
+        </tr>
 
     {% endfor %}
-    </ul>
+    </table>
 {% else %}
     <p>No loom videos are available.</p>
 {% endif %}

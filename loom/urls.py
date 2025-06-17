@@ -26,7 +26,8 @@ urlpatterns = [
     path('users/<int:user_id>', views.user_videos, name= "user_videos"),
     path('submit/', views.add_video, name='add_video'),
     path('teams/',views.team_view, name = 'team_view'),
-    path('teams/<str:team_name>', views.team_videos, name = "team_videos")
+    path('teams/<str:team_name>', views.team_videos, name = "team_videos"),
+    path('transcript/<int:video_id>', views.transcript, name = 'transcript')
 ]
 
 

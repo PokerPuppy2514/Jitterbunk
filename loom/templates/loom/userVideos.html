@@ -4,7 +4,9 @@
 {% if latest_video_list %}
     <ul>
     {% for video in latest_video_list %}
-        <li><a href= {{video.link}}> {{video.title}}</a></li>
+        <if video.user == User.username> <!-- how to check for Use?-->
+            <li><a href= {{video.link}}> {{video.title}}</a></li>
+        </endif>
 
     {% endfor %}
     </ul>

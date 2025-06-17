@@ -1,13 +1,13 @@
 {% load static %}
 
 <!--get every video link-->
-{% if latest_video_list %}
+{% if user_list %}
     <ul>
-    {% for video in latest_video_list %}
+    {% for User in user_list %}
         <li><a href= {{video.link}}> {{video.title}}</a></li>
 
     {% endfor %}
     </ul>
 {% else %}
-    <p>No loom videos are available.</p>
+    <p>No users are available.</p>
 {% endif %}

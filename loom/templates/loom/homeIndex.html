@@ -1,0 +1,10 @@
+{% load static %}
+
+<!--choose between index or userIndex-->
+<ul>
+    <li>
+        <a href= "{% url 'index' %}"> Get Every Video
+        </a></li>
+        <a href= "{% url 'user_index' %}"> Get Videos From User
+        </a></li>
+</ul>

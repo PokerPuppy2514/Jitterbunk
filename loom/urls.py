@@ -23,7 +23,7 @@ urlpatterns = [
     path('', views.HomeView, name = 'homeIndex'),
     path('index/', views.IndexView.as_view(), name = 'index'),
     path('users/', views.UserIndexView.as_view(), name='user_index'),
-    path('users/<int:pk>', view.UserVideosView.as_view(), name= "user_videos")
+    path('users/<int:user_id>', views.UserVideosView.as_view(), name= "user_videos")
 ]
 
 

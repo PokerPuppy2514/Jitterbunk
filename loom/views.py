@@ -38,10 +38,9 @@ class UserVideosView(generic.ListView):
     template_name = 'loom/index.html'
     context_object_name = 'latest_video_list'
     model = User
-
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
         published in the future).
         """
-        return LoomVideo.objects.filter(user = 1)
+        return LoomVideo.objects.filter(user = user_id)

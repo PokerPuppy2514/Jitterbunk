@@ -3,8 +3,8 @@
 <!--get every video link-->
 {% if user_list %}
     <ul>
-    {% for User in user_list %}
-        <li><a href= {{video.link}}> {{video.title}}</a></li>
+    {% for user in user_list %}
+        <li><a href= "{% url 'user_videos' user.id %}"> {{user.username}}</a></li>
 
     {% endfor %}
     </ul>

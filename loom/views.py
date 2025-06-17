@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import LoomVideo, User
 from django.views import generic
 from .forms import LoomVideoForm
@@ -49,7 +50,7 @@ def add_video(request):
             # process the data in form.cleaned_data as required
             form.save()
             # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect(reverse('index'))
 
     # if a GET (or any other method) we'll create a blank form
     else:

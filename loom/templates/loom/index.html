@@ -4,7 +4,7 @@
 {% if latest_video_list %}
     <ul>
     {% for video in latest_video_list %}
-        <li><a href= {{video.link}}> {{video.title}}</a></li>
+        <li><a href= {{video.link}}> {{video.title}}</a><img src = {{video.user.photo}} width = "25"></li>
 
     {% endfor %}
     </ul>

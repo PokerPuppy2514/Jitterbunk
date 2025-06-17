@@ -20,11 +20,13 @@ from . import views
 
 urlpatterns = [
     #chose between unflitered and filtered URL's
-    path('', views.HomeView, name = 'homeIndex'),
+    path('', views.home_view, name = 'homeIndex'),
     path('index/', views.IndexView.as_view(), name = 'index'),
     path('users/', views.UserIndexView.as_view(), name='user_index'),
-    path('users/<int:user_id>', views.userVideos, name= "user_videos"),
-    path('submit/', views.add_video, name='add_video')
+    path('users/<int:user_id>', views.user_videos, name= "user_videos"),
+    path('submit/', views.add_video, name='add_video'),
+    path('teams/',views.team_view, name = 'team_view'),
+    path('teams/<str:team_name>', views.team_videos, name = "team_videos")
 ]
 
 

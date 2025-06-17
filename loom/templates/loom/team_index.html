@@ -1,0 +1,17 @@
+{% load static %}
+
+<!--get every video link-->
+{% if team_list %}
+    <ul>
+    {% for team in team_list %}
+        <li><a href= "{% url 'team_videos' team %}"> {{team}}</a></li>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are available.</p>
+{% endif %}
+
+<br>
+<br>
+<a href = "{% url 'homeIndex'%}"> Home </a>

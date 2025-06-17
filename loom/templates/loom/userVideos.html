@@ -1,9 +1,9 @@
 {% load static %}
 
 <!--get every video link-->
-{% if latest_video_list %}
+{% if video_list %}
     <ul>
-    {% for video in latest_video_list %}
+    {% for video in video_list %}
         <if video.user == User.username> <!-- how to check for Use?-->
             <li><a href= {{video.link}}> {{video.title}}</a></li>
         </endif>
